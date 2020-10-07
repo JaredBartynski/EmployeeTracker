@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: process.env.DB_PASS,
   database: "employeeTracker_db"
 });
 
@@ -87,7 +87,7 @@ connection.query("SELECT * FROM product", function(err, employeeData){
 
     // const employeeId = employeeData.map(item => item.Id);
 
-    
+
 
 });
 }
