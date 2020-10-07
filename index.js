@@ -1,3 +1,4 @@
+require('dotenv').config();
 const inquirer = require("inquirer");
 const myslq = require("mysql");
 
@@ -16,17 +17,33 @@ connection.connect(err =>{
   displayMenu();
 });
 
+
+// Build a command-line application that at a minimum allows the user to:
+
+// Add departments, roles, employees
+
+// View departments, roles, employees
+
+// Update employee roles
+
+
+
 const displayMenu = () => {
   inquirer.prompt([
     {
-      name:
-      type:
-      choices:
-      message: 
+      name:"menuChoice",
+      message: "What would you like to do?",
+      type:"list",
+      choices:[
+        "Add Department",
+        "Add Role",
+        "Add Employee",
+       "View Departments",
+       "View Roles",
+       "View All Employees",
+       "Update Employee Roles"
+      ]
     }
-
-
-
 
   ]).then(answers => {
     answers.menuChoice = choice;
