@@ -81,10 +81,13 @@ connection.query("SELECT * FROM product", function(err, employeeData){
     // use loop to loop through employeeData to get specific info. eployeeData. firstName + lastName.
     console.log(employeeData);
 
-    const firstName = employeeData.map(item => item.firstName);
+    // const firstName = employeeData.map(item => item.firstName);
 
-    const firstName = employeeData.map(item => item.lastName);
+    // const firstName = employeeData.map(item => item.lastName);
 
-    const employeeId = employeeData.map(item => item.Id);
+    // const employeeId = employeeData.map(item => item.Id);
+
+    
+
 });
 }
