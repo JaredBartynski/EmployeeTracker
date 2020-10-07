@@ -57,10 +57,7 @@ const postEmployee = () => {
 
 };
 
-const bidItem = () => {
 
-
-};
 
 
 // post into sql
@@ -73,3 +70,21 @@ const bidItem = () => {
 //    displayMenu();
 //   }
 // }); 
+
+
+
+// select all employees from the database
+const getEmployee = () => {
+connection.query("SELECT * FROM product", function(err, employeeData){
+  if(err)
+    throw err;
+    // use loop to loop through employeeData to get specific info. eployeeData. firstName + lastName.
+    console.log(employeeData);
+
+    const firstName = employeeData.map(item => item.firstName);
+
+    const firstName = employeeData.map(item => item.lastName);
+
+    const employeeId = employeeData.map(item => item.Id);
+});
+}

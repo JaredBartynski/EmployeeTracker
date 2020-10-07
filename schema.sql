@@ -4,24 +4,24 @@ CREATE DATABASE employeeTracker_db;
 USE employeeTracker_db;
 
 CREATE TABLE employee(
-  firstName VARCHAR(30);
-  lastName VARCHAR(30);
-  --roleId   int fk
-  --managerId  int fk
-  --all employees get id int ai pk
-
+  id INT AUTO_INCREMENT,
+  firstName VARCHAR(30) NOT NULL,
+  lastName VARCHAR(30) NOT NULL,
+  roleId INT NOT NULL,
+  managerId INT,
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE role(
---id - INT PRIMARY KEY
---title - VARCHAR(30) to hold role title
---salary - DECIMAL to hold role salary
---department_id - INT to hold reference to department role belongs to
-
+id INT AUTO_INCREMENT,
+roleTitle VARCHAR(30) NOT NULL,
+roleSalary DECIMAL(10,2) NOT NULL,
+departmentId INT,
+PRIMARY KEY (id)
 );
 
 CREATE TABLE department(
---id - INT PRIMARY KEY
---name - VARCHAR(30) to hold department name
-
+id INT AUTO_INCREMENT,
+departmentName VARCHAR(30) NOT NULL,
+PRIMARY KEY (id)
 );
